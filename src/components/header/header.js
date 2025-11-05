@@ -17,7 +17,7 @@ const Header = () => {
         <nav className="nav-block__nav">
           <a href="#marketplace">Marketplace</a>
           <a href="#rankings">Rankings</a>
-          <a href="#connect">Connect a wallet</a>
+          <Link to="/connected-wallet">Connect a wallet</Link>
         </nav>
 
         <Link to="/sing-up">

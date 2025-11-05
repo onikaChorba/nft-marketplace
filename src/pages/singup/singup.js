@@ -31,12 +31,12 @@ const SingUp = () => {
 
           <div className="input-wrapper">
             <img src={password} alt="icon" />
-            <input type="password" placeholder="Password" />
+            <input type="passwordCurrent" placeholder="Password" />
           </div>
 
           <div className="input-wrapper">
             <img src={password} alt="icon" />
-            <input type="password" placeholder="Confirm Password" />
+            <input type="passwordRepeat" placeholder="Confirm Password" />
           </div>
         </div>
 

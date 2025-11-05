@@ -1,6 +1,6 @@
 import "./App.css";
 import { Header } from "./components";
-import { SingUp } from "./pages";
+import { ConnectedWallet, SingUp } from "./pages";
 import { Hero } from "./section";
 import { Routes, Route } from "react-router-dom";
 
@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/sing-up" element={<SingUp />} />
+          <Route path="/connected-wallet" element={<ConnectedWallet />} />
         </Routes>
       </main>
     </div>
