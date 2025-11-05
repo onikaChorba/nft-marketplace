@@ -1,0 +1,54 @@
+import "./header.scss";
+import { useState } from "react";
+import logo from "../../assets/icons/Logo.png";
+import user from "../../assets/icons/user.svg";
+
+const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className={open ? "open" : ""}>
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+
+      <div className="nav-block">
+        <nav className="nav-block__nav">
+          <a href="#marketplace">Marketplace</a>
+          <a href="#rankings">Rankings</a>
+          <a href="#connect">Connect a wallet</a>
+        </nav>
+
+        <button className="nav-block__btn">
+          <img src={user} alt="user" />
+          <p>Sign Up</p>
+        </button>
+      </div>
+
+      <div className="burger" onClick={() => setOpen(!open)}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className="mobile-menu">
+        <a href="#marketplace" onClick={() => setOpen(false)}>
+          Marketplace
+        </a>
+        <a href="#rankings" onClick={() => setOpen(false)}>
+          Rankings
+        </a>
+        <a href="#connect" onClick={() => setOpen(false)}>
+          Connect a wallet
+        </a>
+
+        <button className="nav-block__btn">
+          <img src={user} alt="user" />
+          <p>Sign Up</p>
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

@@ -1,0 +1,25 @@
+:root {
+  --color-bg: #2B2B2B;
+  --color-grey-dark: #3B3B3B;
+  --color-grey-light: #858584;
+  --color-primary: #A259FF;
+  --color-white: #ffffff;
+
+  --font-family-main: "Work Sans", sans-serif;
+}
+
+*{
+    background: var(--color-bg);
+  font-family: var(--font-family-main);
+}
+
+.App{
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: var(--color-white);
+}
+
+main{
+  padding: 0px 72px;
+}
