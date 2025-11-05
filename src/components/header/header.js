@@ -2,6 +2,7 @@ import "./header.scss";
 import { useState } from "react";
 import logo from "../../assets/icons/Logo.png";
 import user from "../../assets/icons/user.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -19,10 +20,12 @@ const Header = () => {
           <a href="#connect">Connect a wallet</a>
         </nav>
 
-        <button className="nav-block__btn">
-          <img src={user} alt="user" />
-          <p>Sign Up</p>
-        </button>
+        <Link to="/sing-up">
+          <button className="nav-block__btn">
+            <img src={user} alt="user" />
+            <p>Sign Up</p>
+          </button>
+        </Link>
       </div>
 
       <div className="burger" onClick={() => setOpen(!open)}>
