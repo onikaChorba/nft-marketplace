@@ -1,4 +1,10 @@
-import { Hero, TopCreators, TrendingCollection } from "../../section";
+import {
+  BrowseCategories,
+  DiscoverNFTs,
+  Hero,
+  TopCreators,
+  TrendingCollection,
+} from "../../section";
 
 const Home = () => {
   return (
@@ -6,6 +12,8 @@ const Home = () => {
       <Hero />
       <TrendingCollection />
       <TopCreators />
+      <BrowseCategories />
+      <DiscoverNFTs />
     </div>
   );
 };
