@@ -2,6 +2,7 @@ import {
   BrowseCategories,
   DiscoverNFTs,
   Hero,
+  Offers,
   TopCreators,
   TrendingCollection,
 } from "../../section";
@@ -14,6 +15,7 @@ const Home = () => {
       <TopCreators />
       <BrowseCategories />
       <DiscoverNFTs />
+      <Offers />
     </div>
   );
 };
