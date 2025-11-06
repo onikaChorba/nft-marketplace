@@ -9,9 +9,11 @@ const Header = () => {
 
   return (
     <header className={open ? "open" : ""}>
-      <div className="logo">
-        <img src={logo} alt="logo" />
-      </div>
+      <Link to="/">
+        <div className="logo">
+          <img src={logo} alt="logo" />
+        </div>
+      </Link>
 
       <div className="nav-block">
         <nav className="nav-block__nav">

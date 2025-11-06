@@ -1,20 +1,22 @@
 import "./App.css";
-import { Header } from "./components";
-import { ConnectedWallet, SingUp } from "./pages";
-import { Hero } from "./section";
+import { Footer, Header } from "./components";
 import { Routes, Route } from "react-router-dom";
+import { ConnectedWallet, Home, SingUp } from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/sing-up" element={<SingUp />} />
-          <Route path="/connected-wallet" element={<ConnectedWallet />} />
-        </Routes>
-      </main>
+    <div>
+      <div className="Content">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sing-up" element={<SingUp />} />
+            <Route path="/connected-wallet" element={<ConnectedWallet />} />
+          </Routes>
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
