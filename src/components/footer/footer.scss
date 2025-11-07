@@ -63,6 +63,10 @@
     display: flex;
     gap: 10px;
     background: inherit;
+
+    img {
+      background: none;
+    }
   }
 
   &__social-link {

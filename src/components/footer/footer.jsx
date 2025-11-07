@@ -25,15 +25,15 @@ const Footer = () => {
           <p className="footer__text">Join our community</p>
           <div className="footer__socials">
             {icons.map((icon, index) => (
-              <a
-                key={index}
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer__social-link"
-              >
-                <img src={icon.src} alt={icon.alt} />
-              </a>
+              // <a
+              //   key={index}
+              //   href="#"
+              //   target="_blank"
+              //   rel="noopener noreferrer"
+              //   className="footer__social-link"
+              // >
+              <img src={icon.src} alt={icon.alt} key={index} />
+              // </a>
             ))}
           </div>
         </div>

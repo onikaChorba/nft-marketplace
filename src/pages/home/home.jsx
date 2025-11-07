@@ -2,6 +2,7 @@ import {
   BrowseCategories,
   DiscoverNFTs,
   Hero,
+  HowItWorks,
   Offers,
   TopCreators,
   TrendingCollection,
@@ -16,6 +17,7 @@ const Home = () => {
       <BrowseCategories />
       <DiscoverNFTs />
       <Offers />
+      <HowItWorks />
     </div>
   );
 };

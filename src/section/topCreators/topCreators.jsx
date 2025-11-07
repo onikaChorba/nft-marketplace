@@ -88,7 +88,7 @@ const TopCreators = () => {
           </p>
         </div>
         <button className="top-creators__btn">
-          <img src={Rocket} />
+          <img src={Rocket} alt="rocket" />
           View Rankings
         </button>
       </div>
