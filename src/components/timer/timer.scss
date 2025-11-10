@@ -1,0 +1,43 @@
+.timer {
+  background: rgba(59, 59, 59, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__label {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+    background: none;
+  }
+
+  &__blocks {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__value {
+    background: none;
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__unit {
+    background: none;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}
