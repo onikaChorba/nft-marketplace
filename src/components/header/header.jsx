@@ -17,7 +17,7 @@ const Header = () => {
 
       <div className="nav-block">
         <nav className="nav-block__nav">
-          <a href="#marketplace">Marketplace</a>
+          <Link to="/marketplace">Marketplace</Link>
           <a href="#rankings">Rankings</a>
           <Link to="/connected-wallet">Connect a wallet</Link>
         </nav>

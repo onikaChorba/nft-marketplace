@@ -1,7 +1,7 @@
 import "./App.css";
 import { Footer, Header } from "./components";
 import { Routes, Route } from "react-router-dom";
-import { ConnectedWallet, Home, SingUp } from "./pages";
+import { ConnectedWallet, Home, MarketPlace, SingUp } from "./pages";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sing-up" element={<SingUp />} />
+            <Route path="/marketplace" element={<MarketPlace />} />
             <Route path="/connected-wallet" element={<ConnectedWallet />} />
           </Routes>
         </main>
