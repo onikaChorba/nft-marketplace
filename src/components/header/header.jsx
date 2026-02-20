@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <header className={open ? "open" : ""}>
-      <Link to="/">
+      <Link to="/nft-marketplace">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
@@ -17,12 +17,12 @@ const Header = () => {
 
       <div className="nav-block">
         <nav className="nav-block__nav">
-          <Link to="/marketplace">Marketplace</Link>
+          <Link to="/nft-marketplace/marketplace">Marketplace</Link>
           <a href="#rankings">Rankings</a>
-          <Link to="/connected-wallet">Connect a wallet</Link>
+          <Link to="/nft-marketplace/connected-wallet">Connect a wallet</Link>
         </nav>
 
-        <Link to="/sing-up">
+        <Link to="/nft-marketplace/sing-up">
           <button className="nav-block__btn">
             <img src={user} alt="user" />
             <p>Sign Up</p>
@@ -46,11 +46,12 @@ const Header = () => {
         <a href="#connect" onClick={() => setOpen(false)}>
           Connect a wallet
         </a>
-
-        <button className="nav-block__btn">
-          <img src={user} alt="user" />
-          <p>Sign Up</p>
-        </button>
+        <Link to="/nft-marketplace/sing-up">
+          <button className="nav-block__btn">
+            <img src={user} alt="user" />
+            <p>Sign Up</p>
+          </button>
+        </Link>
       </div>
     </header>
   );

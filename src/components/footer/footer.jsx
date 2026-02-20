@@ -40,13 +40,13 @@ const Footer = () => {
 
         <div className="footer__block footer__block--links">
           <h3 className="footer__title">Explore</h3>
-          <Link to="/marketplace" className="footer__link">
+          <Link to="/nft-marketplace/marketplace" className="footer__link">
             Marketplace
           </Link>
-          <Link to="/rankings" className="footer__link">
+          <Link to="/nft-marketplace/rankings" className="footer__link">
             Rankings
           </Link>
-          <Link to="/connect-wallet" className="footer__link">
+          <Link to="/nft-marketplace/connect-wallet" className="footer__link">
             Connect a wallet
           </Link>
         </div>

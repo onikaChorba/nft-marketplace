@@ -10,10 +10,16 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sing-up" element={<SingUp />} />
-            <Route path="/marketplace" element={<MarketPlace />} />
-            <Route path="/connected-wallet" element={<ConnectedWallet />} />
+            <Route path="/nft-marketplace/" element={<Home />} />
+            <Route path="/nft-marketplace/sing-up" element={<SingUp />} />
+            <Route
+              path="/nft-marketplace/marketplace"
+              element={<MarketPlace />}
+            />
+            <Route
+              path="/nft-marketplace/connected-wallet"
+              element={<ConnectedWallet />}
+            />
           </Routes>
         </main>
       </div>
