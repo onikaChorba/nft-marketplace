@@ -55,6 +55,7 @@ const nfts = [
 ];
 
 const MarketPlace = () => {
+  // eslint-disable-next-line no-unused-vars
   const [nftList, setNFTList] = useState(nfts);
   const [search, setSearch] = useState("");
 
