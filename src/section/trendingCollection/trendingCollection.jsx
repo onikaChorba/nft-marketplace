@@ -47,6 +47,14 @@ const collections = [
     price: "1025+",
     avatar: Avatar1,
   },
+  {
+    title: "DSGN Animals",
+    author: "MrFox",
+    mainImg: ImgMain1,
+    items: [Img1, Img12],
+    price: "1025+",
+    avatar: Avatar1,
+  },
 ];
 
 const TrendingCollection = () => {
