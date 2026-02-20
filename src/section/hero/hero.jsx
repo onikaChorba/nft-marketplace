@@ -1,8 +1,14 @@
 import "./hero.scss";
+import { useNavigate } from "react-router-dom";
 import rocked from "../../assets/icons/rocked.svg";
 import heroImg from "../../assets/icons/hero.png";
 import avatar from "../../assets/icons/Avatar.png";
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate("/nft-marketplace/sing-up");
+  };
   return (
     <div className="hero">
       <div className="hero__info">
@@ -11,7 +17,7 @@ const Hero = () => {
           NFT marketplace UI created with Anima for Figma. Collect, buy and sell
           art from more than 20k NFT artists.
         </p>
-        <button className="hero__btn">
+        <button className="hero__btn" onClick={handleGetStarted}>
           <img src={rocked} alt="btn-icon" />
           <p>Get Started</p>
         </button>
