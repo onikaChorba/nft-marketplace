@@ -28,6 +28,10 @@ header {
 
     a {
       color: var(--white);
+
+      &.active {
+        color: var(--color-primary) !important;
+      }
     }
   }
 
@@ -46,6 +50,7 @@ header {
     &:hover {
       transform: translateY(-2px);
       box-shadow: var(--shadow-md);
+      color: white;
     }
 
     p {
@@ -94,6 +99,11 @@ header {
   a {
     color: var(--white);
     font-size: 18px;
+  }
+
+  a.active {
+    color: var(--color-primary) !important;
+    font-weight: 700;
   }
 }
 

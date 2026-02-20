@@ -2,7 +2,7 @@ import "./header.scss";
 import { useState } from "react";
 import logo from "../../assets/icons/Logo.png";
 import user from "../../assets/icons/user.svg";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -17,9 +17,11 @@ const Header = () => {
 
       <div className="nav-block">
         <nav className="nav-block__nav">
-          <Link to="/nft-marketplace/marketplace">Marketplace</Link>
-          <a href="#rankings">Rankings</a>
-          <Link to="/nft-marketplace/connected-wallet">Connect a wallet</Link>
+          <NavLink to="/nft-marketplace/marketplace">Marketplace</NavLink>
+          <NavLink to="/nft-marketplace/rankings">Rankings</NavLink>
+          <NavLink to="/nft-marketplace/connected-wallet">
+            Connect a wallet
+          </NavLink>
         </nav>
 
         <Link to="/nft-marketplace/sing-up">
@@ -37,15 +39,18 @@ const Header = () => {
       </div>
 
       <div className="mobile-menu">
-        <a href="#marketplace" onClick={() => setOpen(false)}>
+        <NavLink
+          to="/nft-marketplace/marketplace"
+          onClick={() => setOpen(false)}
+        >
           Marketplace
-        </a>
-        <a href="#rankings" onClick={() => setOpen(false)}>
+        </NavLink>
+        <NavLink to="/nft-marketplace/rankings" onClick={() => setOpen(false)}>
           Rankings
-        </a>
-        <a href="#connect" onClick={() => setOpen(false)}>
+        </NavLink>
+        <NavLink to="/nft-marketplace/connect" onClick={() => setOpen(false)}>
           Connect a wallet
-        </a>
+        </NavLink>
         <Link to="/nft-marketplace/sing-up">
           <button className="nav-block__btn">
             <img src={user} alt="user" />
