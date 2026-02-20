@@ -1,0 +1,147 @@
+.rankings {
+  padding: 80px 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+  color: white;
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-size: 51px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-color: transparent;
+  }
+
+  &__text {
+    font-size: 22px;
+    color: #ccc;
+    background-color: transparent;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 10px;
+  }
+
+  &__filter-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #858584;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+
+    &.active {
+      color: white;
+      border-bottom: 2px solid #858584;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__table-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px 120px;
+    padding: 12px 20px;
+    border: 1px solid #3b3b3b;
+    border-radius: 20px;
+    color: #858584;
+    font-family: "Space Mono", monospace;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px 120px;
+    background: #3b3b3b;
+    margin-bottom: 12px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    align-items: center;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &__col-artist {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 600;
+    background-color: transparent;
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+  }
+
+  &__col-change {
+    color: #00ac4f;
+    font-family: "Space Mono", monospace;
+    background-color: transparent;
+  }
+
+  &__col-num {
+    color: #858584;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__col-sold,
+  &__col-volume {
+    background: transparent;
+  }
+
+  span {
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 834px) {
+  .rankings__table-header,
+  .rankings__row {
+    grid-template-columns: 50px 1fr 100px 100px;
+  }
+  .rankings__col-sold {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .rankings__table-header,
+  .rankings__row {
+    grid-template-columns: 50px 1fr 80px;
+  }
+  .rankings__col-change {
+    display: none;
+  }
+  .rankings__title {
+    font-size: 28px;
+  }
+  .rankings__filter-btn {
+    font-size: 16px;
+  }
+}
