@@ -59,7 +59,7 @@ const MarketPlace = () => {
   const [search, setSearch] = useState("");
 
   const filteredNFTs = nftList.filter((nft) =>
-    nft.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    nft.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()),
   );
 
   return (
