@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./topCreators.scss";
+import { useNavigate } from "react-router-dom";
 import Rocket from "../../assets/icons/rocket-2.svg";
 
 const creators = [
@@ -78,6 +79,19 @@ const creators = [
 ];
 
 const TopCreators = () => {
+  const navigate = useNavigate();
+
+  const [visibleCount, setVisibleCount] = useState(6);
+  const isAllVisible = visibleCount >= creators.length;
+
+  const handleAction = () => {
+    if (isAllVisible) {
+      navigate("/nft-marketplace/rankings");
+    } else {
+      setVisibleCount((prev) => prev + 6);
+    }
+  };
+
   return (
     <section className="top-creators">
       <div className="top-creators__header">
@@ -87,14 +101,18 @@ const TopCreators = () => {
             Checkout Top Rated Creators On The NFT Marketplace
           </p>
         </div>
-        <button className="top-creators__btn">
-          <img src={Rocket} alt="rocket" />
-          View Rankings
+        <button className="top-creators__btn" onClick={handleAction}>
+          <img
+            src={Rocket}
+            alt="rocket"
+            className={isAllVisible ? "rocket-fly" : ""}
+          />
+          {isAllVisible ? "View Rankings" : "See More"}
         </button>
       </div>
 
       <div className="top-creators__grid">
-        {creators.map((creator, index) => (
+        {creators.slice(0, visibleCount).map((creator, index) => (
           <div key={creator.id} className="creator-card">
             <span className="creator-card__rank">{index + 1}</span>
             <img
