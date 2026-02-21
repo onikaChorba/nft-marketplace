@@ -39,16 +39,43 @@
     gap: 20px;
     border-radius: 20px;
 
+    // Базовий стан для плавності анімації
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:hover {
+      // 1. Піднімаємо картку вгору
+      transform: translateY(-12px) scale(1.02);
+
+      // 2. Додаємо неонове світіння в колір бренду
+      border-color: rgba(162, 89, 255, 0.3);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(162, 89, 255, 0.15);
+
+      img {
+        transform: scale(1.1) rotate(2deg);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+      }
+
+      h3 {
+        color: var(--color-primary);
+      }
+    }
+
     img {
       width: 250px;
       height: 250px;
       background: none;
+      transition: transform 0.4s ease;
     }
 
     h3 {
       font-size: 22px;
       font-weight: 600;
       background: none;
+      transition: color 0.3s ease;
     }
 
     p {
@@ -56,6 +83,7 @@
       line-height: 150%;
       background: none;
       text-align: center;
+      color: var(--color-grey-light);
     }
   }
 
@@ -147,7 +175,6 @@
     }
   }
 
-  // 📱 Адаптив
   @media (max-width: 992px) {
     &__cards {
       justify-content: center;
